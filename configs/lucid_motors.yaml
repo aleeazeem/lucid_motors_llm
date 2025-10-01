@@ -1,0 +1,11 @@
+lucid:
+  base_url: "https://lucidmotors.com"
+  paths:
+    - "/knowledge"
+    - "/knowledge/vehicles/air/the-basics/lucid-air-essentials "
+  selectors:
+    content: ".article-content, .manual-section"
+    title: "h1, .article-title"
+    assets: "img[src], a[href$='.pdf']"
+  output:
+    directory: "data/lucid"

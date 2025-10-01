@@ -1,0 +1,11 @@
+lucid:
+  base_url: "https://www.wellsfargo.com"
+  paths:
+    - "/help/online-banking"
+    - "/help/mobile-banking"
+  selectors:
+    content: ".article-content, .manual-section"
+    title: "h1, .article-title"
+    assets: "img[src], a[href$='.pdf']"
+  output:
+    directory: "data/wellsfargo"
