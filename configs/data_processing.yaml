@@ -1,0 +1,44 @@
+configs:
+  name: "Wells Fargo"
+  base_url: "https://www.wellsfargo.com" 
+  paths: "/help"
+  output_path: "output"
+  unprocessed_pdf_file_path: "output/wells_fargo/pdfs"
+  processed_pdf_file_path: "output/wells_fargo"
+  processed_web_file_path: "output/wells_fargo"
+crawler:
+  timeout: 10
+  max_retries: 3
+  max_workers: 10 
+  headers:
+    Accept-Language: "en-US,en;q=0.9"e
+    Accept-Encoding: "gzip, deflate"
+    Connection: "keep-alive"
+  pdf_download: True
+  crawl_delay: 1
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+  max_pages: 100
+  max_depth: 2
+  rate_limit: 1
+ingestion:
+  chunk_size: 1000
+  chunk_overlap: 20 # percentage
+  description_generation: False
+  model_description_generation: "gpt-3.5-turbo"
+  vector_db:
+    db_type: "milvus"
+    collection_name: "wells_fargo_collection"
+    host: "localhost"
+    port: "19530"
+    index_type: "IVF_FLAT"
+  embeddings:
+    model_name: "all-MiniLM-L6-v2"
+    embedding_dim: 384
+    batch_size: 32
+    use_multithreading: True
+    num_workers: 4
+    show_progress: True
+
+    
+
+  
