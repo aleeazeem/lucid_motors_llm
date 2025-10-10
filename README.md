@@ -5,12 +5,13 @@ A complete RAG (Retrieval-Augmented Generation) pipeline that crawls websites, p
 
 ## Features
 
-- Web crawling with configurable depth
-- PDF extraction and processing using Docling
-- Optional AI-powered image description generation (GPT-4o)
+- Web crawling with configurable depth - After the first page, it crawls in subpages parallely
+- PDF extraction and processing using Docling - Run in Parallel using multi threading
+- Optional AI-powered image description generation (GPT-4o) - if boolean is True
 - Embeddings generation and storage in Milvus
 - Concurrent processing for performance
 - Docker Compose and standalone Milvus support
+- To know about how the pipeline works, go through setup.sh file. The details are added in depth
 
 ## Project Structure
 
