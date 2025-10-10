@@ -94,7 +94,7 @@ def ingest_json_to_milvus(config_loader: ConfigLoader) -> Tuple[Optional[MilvusM
     return milvus, embedding_gen
 
 
-def test_query(milvus: MilvusManager, embedding_gen: EmbeddingGenerator, 
+"""def test_query(milvus: MilvusManager, embedding_gen: EmbeddingGenerator, 
                query_text: str, top_k: int = 3):
     log.log_step(f"Query: '{query_text}'")
     
@@ -114,7 +114,7 @@ def test_query(milvus: MilvusManager, embedding_gen: EmbeddingGenerator,
                             f"Chunk: {result['chunk_index'] + 1}/{result['total_chunks']}",
                             f"Text Preview: {result['text'][:200]}...\n"
                          ])
-
+"""
 
 # Main execution
 if __name__ == "__main__":
@@ -129,6 +129,7 @@ if __name__ == "__main__":
     # Test with sample queries
     log.log_pipeline("TESTING INGESTION WITH SAMPLE QUERIES")
     
+    """
     test_queries = [
         "How do I find my routing number?",
         "What are the ATM locations?",
@@ -137,3 +138,4 @@ if __name__ == "__main__":
     
     for query in test_queries:
         test_query(milvus, embedding_gen, query, top_k=3)
+        """

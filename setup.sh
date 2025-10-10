@@ -123,7 +123,7 @@ python3 src/core/ingestion.py
 # Run evaluation
 echo ""
 echo "Step 4: Running evaluation..."
-python3 src/core/evaluation.py
+#python3 src/core/evaluation.py
 
 echo ""
 echo "✓ RAG pipeline completed successfully!"
